@@ -1,28 +1,29 @@
 # QuickNotes
 
-QuickNotes is a note-taking web app built with HTML, CSS and JavaScript. You can write short notes, give each one a category, search through them and delete the ones you no longer need. Your notes are saved in the browser, so they are still there after you refresh the page.
+QuickNotes is a simple note-taking app I built with HTML, CSS and JavaScript. I can type a short note, pick a category for it, search through my notes and delete the ones I don't need any more. The notes are saved in the browser, so they are still there when I refresh the page.
 
 ## Features
 
-- Add notes with a category: Personal, Work or Study
-- Each category has its own colour on the note card
-- Validation: empty notes and notes over 200 characters show an error
-- Delete any note
-- Search notes as you type (not case-sensitive)
-- A count message for zero, one or many notes
+- Add a note and choose a category: Personal, Work or Study
+- Each category has its own coloured stripe on the note card
+- Error messages for empty notes and notes longer than 200 characters
+- Delete any note with its own Delete button
+- Search that filters the notes as I type and ignores capital letters
+- A message that shows how many notes I have (none, one or many)
 - Notes saved with localStorage, so they survive a refresh
-- Responsive layout that works on phones
+- A layout that adjusts for phone screens
 
 ## How to run it locally
 
 1. Download or clone this repository.
 2. Open the folder in VS Code.
 3. Right-click `index.html` and choose **Open with Live Server**.
-4. Or simply double-click `index.html` to open it in your browser.
+4. You can also just double-click `index.html` to open it in your browser.
 
 ## What I learned
 
-- How to use `querySelector`, `createElement` and `textContent` to build the page from JavaScript safely.
-- How to save and load data with `localStorage`, `JSON.stringify` and `JSON.parse`.
-- How the render pattern works: update the array, save it, then redraw the list.
-- How to use Flexbox and a media query to make a layout work on small screens.
+- I learned how to build the list on the page with `createElement` and `textContent`, which is safer than putting what the user types into `innerHTML`.
+- I learned how `localStorage` works. It only stores text, so I had to use `JSON.stringify` to save the notes and `JSON.parse` to load them again.
+- I learned the pattern of changing the array first, then saving it, then drawing the list again with `render()`. When I forgot the final `render()` call, nothing showed on the page, which taught me how important it is.
+- I learned how to use Flexbox for the form and a media query so the form stacks on small screens.
+- I learned to check where my files really are. Some of my folders ended up inside other folders by mistake, and I had to move them.
